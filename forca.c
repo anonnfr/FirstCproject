@@ -2,14 +2,14 @@
 // First C project, hangman
 // Thu Nov  2 11:30:28 AM -03 2023
 
-#define TOT_CAMPAIGN_WORDS 1
+#define TOT_CAMPAIGN_WORDS 2
 
 void choose_game_mode();
 void campaign_mode();
 void play(char word[20]);
 
 const char CAMPAIGN_MODE_WORDS[TOT_CAMPAIGN_WORDS][20] = {
-	"Easy\0", "Peasy\0"
+	"Easy", "Peasy"
 };
 
 int main() {
@@ -44,7 +44,7 @@ void campaign_mode() {
 	char guess[1], word[20];
 	strcpy(word, CAMPAIGN_MODE_WORDS[round]);
 
-	printf("\n %sd\n\n", word); // Change later
+	printf("\n %s\n\n", word); // Change later
 	printf("Try guessing a letter.\nYour guess: ");
 	scanf(" %c", &guess);
 	printf("\nLooking for %c...\n", guess);
