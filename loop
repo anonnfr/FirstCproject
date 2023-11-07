@@ -1,0 +1,2 @@
+#!/bin/bash
+gcc forca.c && clear && ./a.out 
